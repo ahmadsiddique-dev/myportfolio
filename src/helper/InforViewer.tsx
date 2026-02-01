@@ -1,11 +1,9 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import React, { ReactNode } from "react";
 
 const InforViewer = ({ text, info, url }: { text: string; info: string; url: string}) => {
   return (
@@ -20,7 +18,7 @@ const InforViewer = ({ text, info, url }: { text: string; info: string; url: str
       </HoverCardTrigger>
       <HoverCardContent side="top">
         <p>{info}</p>
-        <a href={`${url}`} className="text-sm underline underline-offset-4">see more</a>
+        <a target="_blank" href={`${url}`} className="text-sm underline underline-offset-4">see more</a>
       </HoverCardContent>
     </HoverCard>
   );
