@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="max-w-2xl flex items-center justify-between py-3.5 mx-auto">
+    <footer className="max-w-2xl px-5 flex items-center justify-between py-3.5 mx-auto">
       <div className="flex gap-3.5">
         <p className="font-light tracking-tight italic text-[16px] text-muted-foreground">
           Ahmad Siddique
@@ -35,8 +35,8 @@ const Footer = () => {
           >
             <Image
               src={"/github.svg"}
-              height={15}
-              width={15}
+              height={18}
+              width={18}
               alt="linkedin icon"
               className="invert-95"
             />{" "}
