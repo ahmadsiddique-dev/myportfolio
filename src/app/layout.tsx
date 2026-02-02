@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/elements/Navbar";
 import localFont from 'next/font/local'
+import Footer from "@/components/elements/Footer";
 
 export const myFont = localFont({
   src: './myfont.ttf'
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
