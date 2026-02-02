@@ -26,7 +26,7 @@ const featuredProjectShowcase = [
 
 const Project = () => {
   return (
-    <div className="mb-20">
+    <div className="mb-2">
       <h1 className=" text-3xl font-semibold mb-3">Projects</h1>
       <section className="">
         {featuredProjectShowcase.map((project) => {
@@ -56,7 +56,7 @@ const Project = () => {
         })}
       </section>
       <a className="w-full mx-auto flex justify-center items-center mt-4 cursor-pointer">
-        <Button className="px-3! py-2 underline underline-offset-4" variant={'ghost'} >Explore<MoveRight /></Button>
+        <Button className="px-3! py-5 underline underline-offset-4" variant={'link'} >Explore<MoveRight /></Button>
       </a>
     </div>
   );
