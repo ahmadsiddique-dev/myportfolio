@@ -53,7 +53,7 @@ const Navbar = () => {
               />
             </TooltipTrigger>
             <TooltipContent side={'top'}>
-              <p>Projects</p>
+              <p>Ask AI</p>
             </TooltipContent>
           </Tooltip>
         </a>
