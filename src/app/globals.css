@@ -79,6 +79,9 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+@plugin "../../node_modules/@tailwindcss/typography";
+
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

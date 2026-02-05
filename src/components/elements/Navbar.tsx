@@ -1,11 +1,11 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 import Image from "next/image";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import { ArrowUp, Bot, X } from "lucide-react";
+import { ArrowUp, Bot, Settings, X } from "lucide-react";
 import Markdown from "react-markdown";
 import {
   Drawer,
@@ -25,6 +25,7 @@ import {
 } from "../ui/input-group";
 import { Card } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
+import Link from "next/link";
 
 const AssistantSkeleton = () => (
   <Card className="max-w-[85%] px-2 my-2.5 py-2 space-y-2">
@@ -38,7 +39,11 @@ const Navbar = () => {
   const [input, setInput] = useState("");
   const { messages, sendMessage, status } = useChat();
   const isLoading = status === "submitted" || status === "streaming";
-  const scrollRef = useRef(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    scrollToBottom("auto");
+  }, [messages, status]);
 
   const handleSubmit = () => {
     if (!input.trim() || isLoading) return;
@@ -46,12 +51,14 @@ const Navbar = () => {
     setInput("");
   };
 
-  const newOne = () => {
-    
-  }
+  const scrollToBottom = (behavior: ScrollBehavior = "smooth") => {
+    requestAnimationFrame(() => {
+      bottomRef.current?.scrollIntoView({ behavior });
+    });
+  };
 
   return (
-    <header className="flex mt-2.5 justify-between pb-6 pt-5 px-5 sm:px-12 md:px-2 max-w-2xl mx-auto mb-2 items-center">
+    <header className="flex mt-5 justify-between pb-6 pt-5 px-5 sm:px-12 md:px-2 max-w-2xl mx-auto mb-2 items-center">
       <span className="text-md md:text-lg whitespace-nowrap font-bold">
         <a
           className="
@@ -66,26 +73,27 @@ const Navbar = () => {
       </span>
 
       <nav className="flex text-sm gap-2">
-        <a className="hover:bg-black/70 rounded-full py-1.5 px-1.5 inline-flex" href="">
+        <Link
+          className="hover:bg-black/70 rounded-full py-1.5 px-1.5 inline-flex"
+          href="/project"
+        >
           <Tooltip>
             <TooltipTrigger asChild>
-              <Image
-                className="transition-transform duration-300 hover:rotate-45"
-                src={"/settings.svg"}
-                alt="project-icon"
-                width={20}
-                height={20}
-              />
+                <Settings
+                  className="transition-transform duration-300 hover:rotate-45"
+                  width={20}
+                  height={20}
+                />
             </TooltipTrigger>
             <TooltipContent side="top">
               <p>Projects</p>
             </TooltipContent>
           </Tooltip>
-        </a>
+        </Link>
 
         <div className="hover:bg-black/70 rounded-full py-1.5 px-1.5 inline-flex">
           <Drawer direction="right">
-            <DrawerTrigger>
+            <DrawerTrigger asChild>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Bot />
@@ -112,13 +120,16 @@ const Navbar = () => {
                     {message.role === "user" ? (
                       message.parts.map((part, i) =>
                         part.type === "text" ? (
-                          <div key={`${message.id}-${i}`} className="text-sm px-2.5 max-w-[85%] py-2.5 bg-muted/45 rounded-sm m-1.5">
+                          <div
+                            key={`${message.id}-${i}`}
+                            className="text-sm px-2.5 max-w-[85%] py-2.5 bg-muted/45 rounded-sm m-1.5"
+                          >
                             {part.text}
                           </div>
-                        ) : null
+                        ) : null,
                       )
                     ) : (
-                      <Card className="max-w-[85%] py-4 overflow-hidden text-wrap px-4 my-2.5">
+                      <Card className="max-w-[85%] py-4 text-start overflow-hidden text-wrap px-4 my-2.5">
                         <Markdown>
                           {message.parts
                             .filter((p) => p.type === "text")
@@ -132,12 +143,15 @@ const Navbar = () => {
 
                 {isLoading && <AssistantSkeleton />}
               </div>
-                <div ref={scrollRef}></div>
+              <div ref={bottomRef} />
               <DrawerFooter>
                 <InputGroup>
                   <InputGroupTextarea
+                    maxLength={280}
                     id="block-end-textarea"
-                    placeholder={isLoading ? "AI is thinking..." : "Write a comment..."}
+                    placeholder={
+                      isLoading ? "Thinking..." : "Write a comment..."
+                    }
                     className="max-h-25 no-scrollbar disabled:opacity-60"
                     value={input}
                     disabled={isLoading}
