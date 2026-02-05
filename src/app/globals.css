@@ -140,6 +140,10 @@ body {
   }
 }
 
+.underline-stuff {
+  @apply underline decoration-gray-500 transition-all duration-100 hover:decoration-gray-200 decoration-1 underline-offset-4;
+}
+
 
 ::selection {
   background-color: #ffffff; 

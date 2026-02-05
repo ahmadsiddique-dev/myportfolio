@@ -11,7 +11,7 @@ const InforViewer = ({ text, info, url }: { text: string; info: string; url: str
       <HoverCardTrigger asChild>
         <Button
           variant={"link"}
-          className="underline decoration-gray-500 transition-all duration-100 hover:decoration-gray-200 decoration-1 underline-offset-4"
+          className="underline-stuff"
         >
           {text}
         </Button>

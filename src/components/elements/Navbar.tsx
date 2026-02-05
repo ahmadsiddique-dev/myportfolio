@@ -79,11 +79,11 @@ const Navbar = () => {
         >
           <Tooltip>
             <TooltipTrigger asChild>
-                <Settings
-                  className="transition-transform duration-300 hover:rotate-45"
-                  width={20}
-                  height={20}
-                />
+              <Settings
+                className="transition-transform duration-300 hover:rotate-45"
+                width={20}
+                height={20}
+              />
             </TooltipTrigger>
             <TooltipContent side="top">
               <p>Projects</p>
@@ -93,16 +93,19 @@ const Navbar = () => {
 
         <div className="hover:bg-black/70 rounded-full py-1.5 px-1.5 inline-flex">
           <Drawer direction="right">
-            <DrawerTrigger asChild>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Bot />
-                </TooltipTrigger>
-                <TooltipContent side="top">
-                  <p>Ask AI</p>
-                </TooltipContent>
-              </Tooltip>
-            </DrawerTrigger>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <DrawerTrigger asChild>
+                  <button className="flex items-center justify-center">
+                    <Bot />
+                    <span className="sr-only">Ask AI</span>
+                  </button>
+                </DrawerTrigger>
+              </TooltipTrigger>
+              <TooltipContent side="top">
+                <p>Ask AI</p>
+              </TooltipContent>
+            </Tooltip>
 
             <DrawerContent className="h-dvh max-h-dvh">
               <DrawerHeader className="flex border-b flex-row justify-between">

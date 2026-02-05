@@ -1,4 +1,3 @@
-import React from 'react'
 import Post from '@/components/md/First.mdx'
 
 const page = () => {
