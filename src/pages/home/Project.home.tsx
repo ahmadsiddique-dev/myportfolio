@@ -19,7 +19,7 @@ const Project = () => {
                   </h2>
                 </div>
                 <Link
-                  href={`/project${project.slug}`}
+                  href={`${project.slug}`}
                   className="text-muted-foreground text-sm hover:text-gray-100 shrink-0 duration-300 cursor-pointer"
                 >
                   Read more <span className="">&rarr;</span>
