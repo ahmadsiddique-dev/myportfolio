@@ -1,8 +1,0 @@
-{
-  "name": "my-next-app",
-  "compatibility_date": "2026-02-06",
-  "assets": {
-    "directory": "./.vercel/output/static", 
-    "binding": "ASSETS"
-  }
-}
