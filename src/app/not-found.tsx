@@ -1,9 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
+import './globals.css';
 
 const NotFound = () => {
   return (
-    <div className='h-screen w-full flex items-center justify-center'>
+    <main className='h-screen relative w-full flex-col gap-25 flex bg-[#0a0a0a] items-center justify-center'>
+      <h1 className="text-3xl absolute top-10 text-neutral-900 animate-bounce duration-200 font-bold">Misspelled or Non-existent Page</h1>
     <StyledWrapper>
       <div className="loader">
         <svg className="legl" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20.69332" height="68.19944" viewBox="0,0,20.69332,68.19944">
@@ -66,7 +67,7 @@ const NotFound = () => {
         </svg>
       </div>
     </StyledWrapper>
-    </div>
+    </main>
   );
 }
 

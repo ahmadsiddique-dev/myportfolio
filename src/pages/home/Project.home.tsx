@@ -21,8 +21,9 @@ const Project = () => {
                 <Link
                   href={`${project.slug}`}
                   className="text-muted-foreground text-sm hover:text-gray-100 shrink-0 duration-300 cursor-pointer"
+                  aria-label={`Read more about ${project.title}`}
                 >
-                  Read more <span className="">&rarr;</span>
+                  <span className="">Read more <span className="">&rarr;</span></span>
                 </Link>
               </div>
               <blockquote className="mt-2 ml-4 border-l-2 border-muted pl-6 italic">

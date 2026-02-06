@@ -31,10 +31,12 @@ const Bio = () => {
         </span>
         <Image
           className="rounded-full max-w-45 shadow-lg grayscale border contrast-150 border-gray-500 bg-gray-300"
-          src={"/profile-picture.png"}
-          alt="profile picture"
+          src="/profile-picture.webp"
+          alt="Ahmad Siddique Profile Picture"
           height={450}
+          aria-label="Ahmad Siddique Profile Picture"
           width={450}
+          priority          
         />
       </div>
       <div>

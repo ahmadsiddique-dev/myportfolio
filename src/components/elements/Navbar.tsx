@@ -3,7 +3,6 @@
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import Image from "next/image";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { ArrowUp, Bot, Settings, X } from "lucide-react";
 import Markdown from "react-markdown";
@@ -66,7 +65,7 @@ const Navbar = () => {
             transition-all duration-500       
             hover:text-shadow-lg hover:text-shadow-gray-700
           "
-          href=""
+          href="/"
         >
           Ahmad Siddique
         </a>
@@ -83,6 +82,7 @@ const Navbar = () => {
                 className="transition-transform duration-300 hover:rotate-45"
                 width={20}
                 height={20}
+                aria-label="ahmad siddique projects"
               />
             </TooltipTrigger>
             <TooltipContent side="top">

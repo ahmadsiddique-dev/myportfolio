@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const ProjFooter = () => {
   const router = useRouter();
   return (
-    <div className="text-muted-foreground cursor-pointer hover:text-gray-100 duration-200 ">
+    <div className="text-muted-foreground my-10 cursor-pointer hover:text-gray-100 duration-200 ">
         <div className="flex justify-start items-center gap-0.5" onClick={() => router.push("/")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
