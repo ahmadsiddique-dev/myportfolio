@@ -41,11 +41,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Ahmad Siddique — Portfolio",
     title: "Ahmad Siddique — Full-Stack Developer",
+    images: "/profile-picture.webp",
     description:
       "Full-Stack Developer from Multan, Pakistan. Building modern web applications with Next.js, React, Node.js, and MongoDB.",
   },
   twitter: {
     card: "summary_large_image",
+    images: "/profile-picture.webp",
     title: "Ahmad Siddique — Full-Stack Developer",
     description:
       "Full-Stack Developer from Multan, Pakistan. Building modern web applications with Next.js, React, Node.js, and MongoDB.",

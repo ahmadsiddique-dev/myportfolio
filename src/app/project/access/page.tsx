@@ -1,5 +1,4 @@
 import ProjNav from '@/components/elements/ProjNav'
-import React from 'react'
 import Access from '@/components/md/Access.mdx'
 import type { Metadata } from 'next'
 
