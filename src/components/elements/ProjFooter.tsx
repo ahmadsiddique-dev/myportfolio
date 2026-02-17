@@ -1,13 +1,11 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ProjFooter = () => {
-  const router = useRouter();
   return (
-    <div className="py-10  ">
-      <div
-        className="flex text-muted-foreground  cursor-pointer hover:text-gray-100 duration-200 justify-start items-center gap-0.5"
-        onClick={() => router.push("/")}
+    <div className="py-10">
+      <Link
+        href="/"
+        className="flex text-muted-foreground cursor-pointer hover:text-gray-100 duration-200 justify-start items-center gap-0.5"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +25,7 @@ const ProjFooter = () => {
           <path d="M5 12l4 -4" />
         </svg>{" "}
         <span>Go Home</span>
-      </div>
+      </Link>
     </div>
   );
 };
