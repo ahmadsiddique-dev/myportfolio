@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="my-10 ">
+    <main id="main-content" className="my-10 ">
       <ProjNav />
       <Gravity />
     </main>

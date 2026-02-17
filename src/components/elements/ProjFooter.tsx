@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ProjFooter = () => {
   return (
-    <div className="py-10">
+    <nav className="py-10" aria-label="Breadcrumb">
       <Link
         href="/"
         className="flex text-muted-foreground cursor-pointer hover:text-gray-100 duration-200 justify-start items-center gap-0.5"
@@ -17,7 +17,8 @@ const ProjFooter = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="icon mt-0.5 icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"
+          className="icon mt-0.5"
+          aria-hidden="true"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M5 12l14 0" />
@@ -26,7 +27,7 @@ const ProjFooter = () => {
         </svg>{" "}
         <span>Go Home</span>
       </Link>
-    </div>
+    </nav>
   );
 };
 

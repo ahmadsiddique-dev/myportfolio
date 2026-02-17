@@ -6,7 +6,7 @@ import { projects } from '@/data/projects.json'
 const Project = () => {
   return (
     <div className="mb-7">
-      <h1 className=" text-3xl font-semibold mb-3">Projects</h1>
+      <h2 className=" text-3xl font-semibold mb-3">Projects</h2>
       <section className="">
         {projects.map((project) => {
           return (

@@ -4,9 +4,9 @@ import Image from "next/image";
 const Bio = () => {
   return (
     <section>
-      <h1 className=" text-3xl font-semibold mb-3">About</h1>
+      <h2 className=" text-3xl font-semibold mb-3">About</h2>
       <div className="flex gap-5 flex-col-reverse sm:flex-row justify-center items-center">
-        <span>
+        <div>
           <p className="py-6">
             I'm a{" "}
             <InforViewer
@@ -28,15 +28,14 @@ const Bio = () => {
             be their friend, so I learned their language. My interest in the web
             introduced me to JavaScript 🖤
           </p>
-        </span>
+        </div>
         <Image
           className="rounded-full max-w-45 shadow-lg grayscale border contrast-150 border-gray-500 bg-gray-300"
           src="/profile-picture.webp"
-          alt="Ahmad Siddique Profile Picture"
+          alt="Ahmad Siddique — Full-Stack Developer from Multan, Pakistan"
           height={450}
-          aria-label="Ahmad Siddique Profile Picture"
           width={450}
-          priority          
+          priority
         />
       </div>
       <div>

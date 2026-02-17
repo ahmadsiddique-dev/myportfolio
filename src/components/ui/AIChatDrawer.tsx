@@ -57,13 +57,13 @@ export const AIChatDrawer = () => {
         <DrawerHeader className="flex border-b flex-row justify-between">
           <DrawerTitle>Have some Questions?</DrawerTitle>
           <DrawerClose asChild>
-            <Button variant="default">
+            <Button variant="default" aria-label="Close chat">
               <X />
             </Button>
           </DrawerClose>
         </DrawerHeader>
 
-        <div className="no-scrollbar overflow-y-auto px-4">
+        <div className="no-scrollbar overflow-y-auto px-4" role="log" aria-live="polite" aria-label="Chat messages">
           {messages.map((message) => (
             <div key={message.id} className="whitespace-pre-wrap">
               {message.role === "user" ? (
@@ -98,6 +98,7 @@ export const AIChatDrawer = () => {
               maxLength={280}
               placeholder={isLoading ? "Thinking..." : "Write a comment..."}
               className="max-h-25 no-scrollbar disabled:opacity-60"
+              aria-label="Type your message"
               value={input}
               disabled={isLoading}
               onChange={(e) => setInput(e.currentTarget.value)}
