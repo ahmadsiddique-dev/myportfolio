@@ -12,13 +12,14 @@ const Footer = () => {
           <a
             className="underline decoration-gray-500 hover:decoration-gray-100 underline-offset-4 justify-center flex items-center gap-1"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/in/ahmad-siddique-dev/"
           >
             <Image
               src={"/linkedin.svg"}
               height={20}
               width={20}
-              alt="linkedin icon"
+              alt="LinkedIn profile"
             />{" "}
             LinkedIn{" "}
           </a>
@@ -26,20 +27,21 @@ const Footer = () => {
         </p>
       </div>
       <p className="flex justify-center items-center ">
-         <a
-            className="underline gap-2 decoration-gray-500 hover:decoration-gray-100 underline-offset-4 justify-center flex items-center"
-            target="_blank"
-            href="https://github.com/ahmadsiddique-dev"
-          >
-            <Image
-              src={"/github.svg"}
-              height={18}
-              width={18}
-              alt="linkedin icon"
-              className="invert-95"
-            />{" "}
-            <span className="text-sm font-light">Source</span>{" "}
-          </a>
+        <a
+          className="underline gap-2 decoration-gray-500 hover:decoration-gray-100 underline-offset-4 justify-center flex items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/ahmadsiddique-dev"
+        >
+          <Image
+            src={"/github.svg"}
+            height={18}
+            width={18}
+            alt="GitHub profile"
+            className="invert-95"
+          />{" "}
+          <span className="text-sm font-light">Source</span>{" "}
+        </a>
       </p>
     </footer>
   );

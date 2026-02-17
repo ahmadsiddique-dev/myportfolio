@@ -68,11 +68,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "Ahmad Siddique — Portfolio",
+        url: "https://ahmadsiddique.dev",
+        description:
+          "Full-Stack Developer from Multan, Pakistan. Building modern web applications with Next.js, React, Node.js, and MongoDB.",
+      },
+      {
+        "@type": "Person",
+        name: "Ahmad Siddique",
+        url: "https://ahmadsiddique.dev",
+        jobTitle: "Full-Stack Developer",
+        knowsAbout: [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "Tailwind CSS",
+          "Redux",
+        ],
+        sameAs: [
+          "https://github.com/ahmadsiddique-dev",
+          "https://www.linkedin.com/in/ahmad-siddique-dev/",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Multan",
+          addressCountry: "PK",
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

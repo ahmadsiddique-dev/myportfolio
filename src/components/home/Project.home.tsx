@@ -15,7 +15,7 @@ const Project = () => {
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="h-1 w-3 rounded-lg bg-muted/95 shrink-0" />
                   <h2 className="text-lg font-semibold line-clamp-1 wrap-break-word">
-                    <a target="_blank" className="underline-stuff" href={project.url}>{project.title.split("-")[0]}</a> - {project.title.split("-")[1]}
+                    <a target="_blank" rel="noopener noreferrer" className="underline-stuff" href={project.url}>{project.title.split("-")[0]}</a> - {project.title.split("-")[1]}
                   </h2>
                 </div>
                 <Link

@@ -2,15 +2,50 @@ import createMDX from '@next/mdx'
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
+
+  // Performance & security optimizations
+  poweredByHeader: false,
+
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        // Cache static assets for 1 year
+        source: '/(.*)\\.(ico|png|svg|jpg|jpeg|webp|avif|woff|woff2)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 }
  
 const withMDX = createMDX({
     extension: /\.(md|mdx)$/,
-  // Add markdown plugins here, as desired
 })
  
-// Merge MDX config with Next.js config
 export default withMDX(nextConfig)
