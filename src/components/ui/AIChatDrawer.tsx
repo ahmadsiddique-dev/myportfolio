@@ -42,7 +42,7 @@ export const AIChatDrawer = () => {
       <Tooltip>
         <TooltipTrigger asChild>
           <DrawerTrigger asChild>
-            <button className="flex items-center justify-center hover:bg-black/70 rounded-full py-1.5 px-1.5">
+            <button className="flex items-center justify-center hover:bg-black/70 rounded-full p-3">
               <Bot />
               <span className="sr-only">Ask AI</span>
             </button>

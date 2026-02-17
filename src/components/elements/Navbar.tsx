@@ -15,9 +15,9 @@ const Navbar = () => {
         </Link>
       </span>
 
-      <nav className="flex text-sm gap-2">
+      <nav className="flex text-sm gap-1">
         <Link
-          className="hover:bg-black/70 rounded-full py-1.5 px-1.5 inline-flex"
+          className="hover:bg-black/70 rounded-full p-3 inline-flex"
           href="/project"
         >
           <Tooltip>
