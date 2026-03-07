@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <main id="main-content">
-      <ProjFooter />
       <h1 className='pb-7 text-3xl font-bold'>My Projects</h1>
       <div>
         <ul className='list-disc pl-5 space-y-2'>
