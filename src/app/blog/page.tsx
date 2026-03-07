@@ -35,7 +35,7 @@ const BlogPage = () => {
               <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 line-clamp-1 mb-3">
                 {blog.title}
               </h2>
-              <div className="flex items-center justify-between gap-2 text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
+              <div className="flex items-center justify-start gap-5 text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
                 <span className="flex items-center gap-1.5">
                   <CalendarRange size={16} />
                   {blog.date}
@@ -44,10 +44,10 @@ const BlogPage = () => {
                   <BookOpenText size={16} />
                   {blog.readTime}
                 </span>
-                <span className="flex items-center gap-1.5 whitespace-nowrap">
+                {/* <span className="flex items-center gap-1.5 whitespace-nowrap">
                   <User size={16} />
                   {blog.author}
-                </span>
+                </span> */}
               </div>
               <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 line-clamp-3 leading-relaxed">
                 {blog.description}
