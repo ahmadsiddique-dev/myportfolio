@@ -2,6 +2,7 @@ import React from 'react'
 import Feedo from '@/components/md/Feedo.mdx'
 import ProjNav from '@/components/elements/ProjNav'
 import type { Metadata } from 'next'
+import ProjFooter from '@/components/elements/ProjFooter';
 
 export const metadata: Metadata = {
   title: "Feedo — Anonymous Feedback Platform",
@@ -19,6 +20,7 @@ const page = () => {
     <main id="main-content" className='my-10 '>
       <ProjNav />
       <Feedo />
+      <ProjFooter />
     </main>
   )
 }

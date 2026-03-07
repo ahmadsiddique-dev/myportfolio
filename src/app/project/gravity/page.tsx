@@ -1,3 +1,4 @@
+import ProjFooter from "@/components/elements/ProjFooter";
 import ProjNav from "@/components/elements/ProjNav";
 import Gravity from "@/components/md/Gravity.mdx";
 import type { Metadata } from "next";
@@ -18,6 +19,7 @@ const page = () => {
     <main id="main-content" className="my-10 ">
       <ProjNav />
       <Gravity />
+      <ProjFooter />
     </main>
   );
 };

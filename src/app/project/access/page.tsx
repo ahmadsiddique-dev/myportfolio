@@ -1,3 +1,4 @@
+import ProjFooter from '@/components/elements/ProjFooter';
 import ProjNav from '@/components/elements/ProjNav'
 import Access from '@/components/md/Access.mdx'
 import type { Metadata } from 'next'
@@ -18,6 +19,7 @@ const page = () => {
     <main id="main-content" className='my-10'>
       <ProjNav />
       <Access />
+      <ProjFooter />
     </main>
   )
 }
