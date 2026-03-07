@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import blogsData from "@/data/blogs.json";
 
-const BlogPage = () => {
+const BlogPage = () => { 
   return (
     <main id="main-content">
       <div className="mb-6  pt-10">
