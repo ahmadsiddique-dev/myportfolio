@@ -4,7 +4,7 @@
             "id": "1",
             "slug": "blog/git-headache",
             "title": "Git Headache",
-            "image": "/feedo.png",
+            "image": "/blog/git-headache.png",
             "description": "Description I want differnt and long description for each blog a little more than 3 lines no thats not enough now its enough",
             "date": "07/03/2026",
             "readTime": "5 min read",

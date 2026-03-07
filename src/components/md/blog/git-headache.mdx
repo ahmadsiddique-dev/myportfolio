@@ -1,0 +1,62 @@
+import CodeBlock from '@/components/elements/CodeBlock';
+
+# Stop Typing the Same Git Commands Over and Over
+
+> This blog will guide you through multiple techniques for automating commands  `git add`, `git commit`, and `git push` into workflow.
+
+![Git Headache](/blog/git-headache.png)
+
+First of all we need to understand what actually these commands do if you know you can skip this part
+
+## First Understand
+
+### git add .
+Git add takes your modified files from your working directory and places them into an intermediate space called the `staging area` (or index). Think of this step as organizing the papers on your desk before you place them into a binder.
+
+### git commit -m "message"
+Git commit takes the files you have staged and permanently records them as a new, immutable snapshot in your local repository. It acts like a "save button" that finalizes your changes into a checkpoint, assigning a unique ID (hash) to that exact version of your files along with a descriptive message explaining what you changed
+
+### git push
+Git push is used to share your work. Because git add and git commit only save changes to your local machine, you must use git push to upload those local commits to a remote repository (such as GitHub, GitLab, or Bitbucket)
+
+## Move to Topic 
+
+### Windows :
+
+#### Powershell Profile
+You can use powershell profile to add a script and you can run that script and enjoy.
+
+Go to your powershell and type:
+<CodeBlock  lang="powershell">
+{`
+> notepad $PROFILE
+
+`}
+</CodeBlock>
+
+This will open a file and this is where you can define your script
+as here is one
+
+<CodeBlock  lang="powershell">
+{`
+> function  gito {
+        param([string]$msg)
+        git add .
+        git commit -m $msg
+        git push
+}
+`}
+</CodeBlock>
+
+> Don't forget to restart powershell
+
+Now onward you need to just type this in terminal and you are done :
+
+<CodeBlock  lang="powershell">
+{`
+> gito "This is a test command" 
+
+`}
+</CodeBlock>
+
+# 🚧 Remain work will be happening tommorow 🚧

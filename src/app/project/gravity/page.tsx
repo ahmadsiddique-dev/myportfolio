@@ -1,6 +1,6 @@
 import ProjFooter from "@/components/elements/ProjFooter";
 import ProjNav from "@/components/elements/ProjNav";
-import Gravity from "@/components/md/Gravity.mdx";
+import Gravity from "@/components/md/project/Gravity.mdx";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

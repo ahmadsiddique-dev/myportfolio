@@ -1,5 +1,5 @@
 import React from 'react'
-import Feedo from '@/components/md/Feedo.mdx'
+import Feedo from '@/components/md/project/Feedo.mdx'
 import ProjNav from '@/components/elements/ProjNav'
 import type { Metadata } from 'next'
 import ProjFooter from '@/components/elements/ProjFooter';

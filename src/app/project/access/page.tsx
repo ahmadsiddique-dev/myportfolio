@@ -1,6 +1,6 @@
 import ProjFooter from '@/components/elements/ProjFooter';
 import ProjNav from '@/components/elements/ProjNav'
-import Access from '@/components/md/Access.mdx'
+import Access from '@/components/md/project/Access.mdx'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

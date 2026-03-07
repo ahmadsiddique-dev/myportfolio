@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import blogsData from "@/data/blogs.json";
 
-const BlogPage = () => { 
+const BlogPage = () => {
   return (
     <main id="main-content">
       <div className="mb-6  pt-10">
@@ -19,41 +19,40 @@ const BlogPage = () => {
       <h1 className="pb-7 text-3xl font-bold">My Blogs</h1>
       <section className="flex flex-col gap-4">
         {blogsData.blogs.map((blog) => (
-          <Card
-            key={blog.id}
-            className="flex flex-col sm:flex-row w-full sm:max-w-3xl p-4 gap-5 bg-transparent border-zinc-200 max-w-[430px] mx-auto dark:border-zinc-800 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors"
-          >
-            <div className="relative w-full sm:w-[260px] h-[180px] shrink-0 border border-zinc-200 dark:border-zinc-800 rounded-lg flex items-center justify-center bg-zinc-50 dark:bg-[#0a0a0a] overflow-hidden">
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col flex-1 py-1">
-              <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 line-clamp-1 mb-3">
-                {blog.title}
-              </h2>
-              <div className="flex items-center justify-start gap-5 text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
-                <span className="flex items-center gap-1.5">
-                  <CalendarRange size={16} />
-                  {blog.date}
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <BookOpenText size={16} />
-                  {blog.readTime}
-                </span>
-                {/* <span className="flex items-center gap-1.5 whitespace-nowrap">
+          <Link key={blog.id} href={blog.slug}>
+            <Card className="flex flex-col sm:flex-row w-full sm:max-w-3xl p-4 gap-5 bg-transparent border-zinc-200 max-w-[430px] mx-auto dark:border-zinc-800 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors">
+              <div className="relative w-full sm:w-[260px] h-[180px] shrink-0 border border-zinc-200 dark:border-zinc-800 rounded-lg flex items-center justify-center bg-zinc-50 dark:bg-[#0a0a0a] overflow-hidden">
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col flex-1 py-1">
+                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 line-clamp-1 mb-3">
+                  {blog.title}
+                </h2>
+                <div className="flex items-center justify-start gap-5 text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
+                  <span className="flex items-center gap-1.5">
+                    <CalendarRange size={16} />
+                    {blog.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <BookOpenText size={16} />
+                    {blog.readTime}
+                  </span>
+                  {/* <span className="flex items-center gap-1.5 whitespace-nowrap">
                   <User size={16} />
                   {blog.author}
                 </span> */}
+                </div>
+                <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 line-clamp-3 leading-relaxed">
+                  {blog.description}
+                </p>
               </div>
-              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 line-clamp-3 leading-relaxed">
-                {blog.description}
-              </p>
-            </div>
-          </Card>
+            </Card>
+          </Link>
         ))}
       </section>
     </main>
