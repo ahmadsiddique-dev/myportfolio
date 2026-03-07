@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <main id="main-content">
-      <div className="mb-6 mt-10">
+      <div className="mb-6  pt-10">
         <Link
           href="/"
           className="text-muted-foreground hover:text-foreground duration-200 flex items-center gap-1.5 w-fit"

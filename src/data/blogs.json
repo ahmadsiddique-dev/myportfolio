@@ -1,0 +1,24 @@
+{
+    "blogs": [
+        {
+            "id": "1",
+            "slug": "blog/git-headache",
+            "title": "Git Headache",
+            "image": "/feedo.png",
+            "description": "Description I want differnt and long description for each blog a little more than 3 lines no thats not enough now its enough",
+            "date": "07/03/2026",
+            "readTime": "5 min read",
+            "author": "Ahmad Siddique"
+        },
+        {
+            "id": "2",
+            "slug": "blog/kuch-bhi",
+            "title": "Kuch Bhi",
+            "image": "/gravity.png",
+            "description": "The entire card itself has the thin border styling and the hover effects characteristic of the rest of your site.",
+            "date": "07/03/2026",
+            "readTime": "4 min read",
+            "author": "Ahmad Siddique"
+        }
+    ]
+}
