@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import { Settings } from "lucide-react";
+import { CalendarCog, NotebookPen } from "lucide-react";
 import { AIChatDrawer } from "@/components/ui/AIChatDrawer";
 
 const Navbar = () => {
@@ -18,12 +18,28 @@ const Navbar = () => {
       <nav className="flex text-sm gap-1">
         <Link
           className="hover:bg-black/70 rounded-full p-3 inline-flex"
+          href="/blog"
+        >
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button className="flex items-center justify-center">
+                <NotebookPen className="" width={20} height={20} />
+                <span className="sr-only">See Blogs</span>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              <p>Blogs</p>
+            </TooltipContent>
+          </Tooltip>
+        </Link>
+        <Link
+          className="hover:bg-black/70 rounded-full p-3 inline-flex"
           href="/project"
         >
           <Tooltip>
             <TooltipTrigger asChild>
               <button className="flex items-center justify-center">
-                <Settings className="transition-transform duration-300 hover:rotate-45" width={20} height={20} />
+                <CalendarCog className="" width={20} height={20} />
                 <span className="sr-only">See Projects</span>
               </button>
             </TooltipTrigger>
