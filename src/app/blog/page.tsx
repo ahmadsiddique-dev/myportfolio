@@ -3,6 +3,34 @@ import { ArrowLeft, BookOpenText, CalendarRange, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import blogsData from "@/data/blogs.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My Blogs | Ahmad Siddique",
+  description:
+    "Read my latest articles, tutorials, and thoughts on web development and software engineering.",
+  openGraph: {
+    title: "My Blogs | Ahmad Siddique",
+    description:
+      "Read my latest articles, tutorials, and thoughts on web development and software engineering.",
+    url: "https://ahmadsiddique.dev/blog",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Ahmad Siddique Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My Blogs | Ahmad Siddique",
+    description:
+      "Read my latest articles, tutorials, and thoughts on web development and software engineering.",
+    images: ["/preview.png"],
+  },
+};
 
 const BlogPage = () => {
   return (
