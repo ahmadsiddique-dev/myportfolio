@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://ahmadsiddique.dev/blog",
     images: [
       {
-        url: "/preview.png",
+        url: "https://ahmadsiddique.dev/preview.png",
         width: 1200,
         height: 630,
         alt: "Ahmad Siddique Blog",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "My Blogs | Ahmad Siddique",
     description:
       "Read my latest articles, tutorials, and thoughts on web development and software engineering.",
-    images: ["/preview.png"],
+    images: ["https://ahmadsiddique.dev/preview.png"],
   },
 };
 

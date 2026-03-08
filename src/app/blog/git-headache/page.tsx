@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: `https://ahmadsiddique.dev/${blogInfo?.slug}`,
     images: [
       {
-        url: blogInfo?.image || "/preview.png",
+        url: `https://ahmadsiddique.dev${blogInfo?.image || "/preview.png"}`,
         width: 1200,
         height: 630,
         alt: blogInfo?.title,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${blogInfo?.title} | Ahmad Siddique`,
     description: blogInfo?.description,
-    images: [blogInfo?.image || "/preview.png"],
+    images: [`https://ahmadsiddique.dev${blogInfo?.image || "/preview.png"}`],
   },
 };
 
