@@ -43,7 +43,7 @@ const BlogPage = () => {
           <ArrowLeft className="w-5 h-5" />
           <span>Go Home</span>
         </Link>
-      </div>
+      </div> 
       <h1 className="pb-7 text-3xl font-bold">My Blogs</h1>
       <section className="flex flex-col gap-4">
         {blogsData.blogs.map((blog) => (
