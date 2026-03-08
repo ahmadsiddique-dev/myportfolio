@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: "/profile-picture.webp",
+    images: "/preview.png",
     title: "Ahmad Siddique — Full-Stack Developer",
     description:
       "Full-Stack Developer from Multan, Pakistan. Building modern web applications with Next.js, React, Node.js, and MongoDB.",
