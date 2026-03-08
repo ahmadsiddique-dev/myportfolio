@@ -10,7 +10,7 @@ const Project = () => {
       <section className="">
         {projects.map((project) => {
           return (
-            <div key={project.id} className="mt-3 w-full max-w-2xl">
+            <div key={project.id} className="mt-8 w-full max-w-2xl">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="h-1 w-3 rounded-lg bg-muted/95 shrink-0" />

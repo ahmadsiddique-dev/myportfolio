@@ -39,7 +39,7 @@ const Bio = () => {
         />
       </div>
       <div>
-        <p className="py-6">
+        {/* <p className="py-6">
           I started with{" "}
           <InforViewer
             url="https://en.wikipedia.org/wiki/HTML"
@@ -55,9 +55,19 @@ const Bio = () => {
           . They taught me how beautiful things can be. I keep learning and
           practicing by making amazing things, and somewhere along the way, how
           I learned Tailwind is still a mystery.
-        </p>
-        <p className="pb-6">
-          When I started learning
+        </p> */}
+        <p className="py-6">
+          After completing <InforViewer
+            url="https://en.wikipedia.org/wiki/HTML"
+            text="HTML"
+            info="HTML (HyperText Markup Language) is the most basic building block of the Web"
+          />{" "}
+          and{" "}
+          <InforViewer
+            url="https://en.wikipedia.org/wiki/CSS"
+            info="CSS is the language we use to style a Web page."
+            text="CSS"
+          />, I started learning
           <InforViewer
             url="https://en.wikipedia.org/wiki/JavaScript"
             text="JavaScript"
