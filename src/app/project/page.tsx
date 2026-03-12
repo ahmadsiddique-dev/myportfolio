@@ -1,6 +1,5 @@
-import { projects } from "@/data/projects.json";
+import { projects } from "@/data/listProject.json";
 import Link from "next/link";
-import ProjFooter from "@/components/elements/ProjFooter";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
