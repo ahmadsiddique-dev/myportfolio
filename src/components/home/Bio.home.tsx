@@ -20,7 +20,7 @@ const Bio = () => {
               text="Multan"
               info=" A major cultural, religious and economic centre of the Punjab region, Multan is one of the oldest inhabited cities of Asia, with a history stretching deep into antiquity"
             />
-            , Pakistan and I've been serving to the web for the past three years
+            , Pakistan and I've been serving to the web for the past two years
             and have learned many amazing things.
           </p>
           <p>
